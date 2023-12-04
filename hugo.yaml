@@ -62,3 +62,14 @@ menu:
     identifier: categories
     weight: 400
     url: "/categories/"
+
+# https://gohugo.io/getting-started/configuration-markup/#goldmark
+# https://gohugo.io/getting-started/configuration-markup/#highlight
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    # style: monokai
+    # style: perldoc  (No, because of bad rendering of the yaml code on the smartphone!!!)
+    style: solarized-light
