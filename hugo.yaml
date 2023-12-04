@@ -1,0 +1,64 @@
+# themes\anatole\exampleSite\config\_default\config.toml
+# https://gohugo.io/getting-started/configuration/
+
+baseURL: https://mlabrkic.github.io/
+languageCode: en-us  # Update to "en-gb" if you prefer, or another language!
+title: Website of mlabrkic
+theme: anatole
+
+# summarylength: 10
+enableEmoji: true
+
+# https://github.com/lxndrblz/anatole/wiki
+# Please note that the title under the [params] only adjusts the page title in the sidebar.
+params:
+  title: My website!
+  author: mlabrkic
+  description: Actually, this is the place for my notes!
+  profilePicture: images/my_github_logo.jpg
+
+  readMore: true
+  copyright: 2023-{{ YEAR }} mlabrkic - Powered by [Hugo](https://gohugo.io/getting-started/quick-start/) & [Anatole](https://github.com/lxndrblz/anatole/wiki/)
+  contentratio: 0.8
+  # hidesidebar: true
+
+  # Social links
+  # use 'fab' when brand icons, use 'fas' when standard solid icons.
+  socialIcons:
+  - name: e-mail
+    icon: "fas fa-envelope"
+    title: "e-mail"
+    url: "mailto:mlabrkic@hotmail.com"
+
+  - name: Linkedin
+    icon: "fab fa-linkedin"
+    title: "Linkedin"
+    url: "https://www.linkedin.com/in/mlabrkic/"
+
+  - name: GitHub
+    icon: "fab fa-github"
+    title: "GitHub"
+    url: "https://github.com/mlabrkic"
+
+# https://gohugo.io/content-management/menus/#define-in-site-configuration
+menu:
+  main:
+  - name: Home
+    identifier: home
+    weight: 100
+    url: "/"
+
+  - name: Archive
+    identifier: posts
+    weight: 200
+    url: "/posts/"
+
+  - name: Tags
+    identifier: tags
+    weight: 300
+    url: "/tags/"
+
+  - name: Categories
+    identifier: categories
+    weight: 400
+    url: "/categories/"
