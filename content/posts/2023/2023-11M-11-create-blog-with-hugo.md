@@ -388,7 +388,7 @@ cd mywebsite
 (git remote add origin https://github.com/mlabrkic/mlabrkic.github.io.git)
 (git remote remove origin)
 ==>
-git remote add origin https://mlabrkic:GITHUB_TOKEN@github.com/mlabrkic/mlabrkic.github.io.git
+git remote add origin https://mlabrkic:GITHUB_PAT@github.com/mlabrkic/mlabrkic.github.io.git
 
 To list the remote repositories that are configured, along with their URLs:
 git remote -v
@@ -400,6 +400,10 @@ git commit -m "Initial setup of website"
 To push the changes in your local repository to GitHub.com, run the following command.
 git push origin main
 ```
+
+GITHUB_PAT = Personal access token
+
+GitHub: [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
 
 
 ------------------------------
