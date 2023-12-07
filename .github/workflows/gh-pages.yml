@@ -1,5 +1,6 @@
 # https://github.com/actions/starter-workflows/blob/main/pages/hugo.yml
-# EDIT: HUGO_VERSION, Comment "Install Dart Sass", Checks-out (@v4)
+# (2023_12M_07) EDIT: branches: ["main"], HUGO_VERSION, Comment "Install Dart Sass"
+# commit 71ac18e , 3 days ago
 
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Hugo site to Pages
@@ -50,7 +51,7 @@ jobs:
           submodules: recursive
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
@@ -77,4 +78,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
