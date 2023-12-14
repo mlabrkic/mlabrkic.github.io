@@ -351,25 +351,19 @@ Because it can happen that the author of "Anatole theme" deletes its repo, backu
 
 ## 2 Host on GitHub Pages
 
-gohugo: [Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
-
+gohugo: [Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)\
 Deploy Hugo as a GitHub Pages project or "personal/organizational" site
-and automate the whole process with GitHub Actions
+and automate the whole process with GitHub Actions.
 
-Prerequisites:
-* Create a Hugo site and test it locally with "hugo server".
-
-References:
-* GitHub: [Getting started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)
-* GitHub: [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
+Prerequisites:  Create a Hugo site and test it locally with "hugo server".
 
 ------------------------------
 #### Step 2.1 Create a GitHub repository (public)
 
 GitHub: [Create a repo](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 
-> [!IMPORTANT]
-To avoid errors, do not initialize the new repository with any files [README, license, or gitignore files (or workflow)]!!!\
+> **NOTE:**
+To avoid errors, leave this repo empty (no: README.md, LICENSE, .gitignore files (or workflow yml))!!!\
 (See below:  Adding a local repository to GitHub using Git)
 
 Repository name: `mlabrkic.github.io`\
@@ -388,12 +382,16 @@ cd mywebsite
 (git remote add origin https://github.com/mlabrkic/mlabrkic.github.io.git)
 (git remote remove origin)
 ==>
-git remote add origin https://mlabrkic:GITHUB_PAT@github.com/mlabrkic/mlabrkic.github.io.git
+git remote add origin https://mlabrkic:GPAT@github.com/mlabrkic/mlabrkic.github.io.git
 
 To list the remote repositories that are configured, along with their URLs:
 git remote -v
 
 git status
+
+If "master" branch was initially created, and I want to change its name to "main":
+git branch -M main
+
 git add .
 git commit -m "Initial setup of website"
 
@@ -401,7 +399,7 @@ To push the changes in your local repository to GitHub.com, run the following co
 git push origin main
 ```
 
-GITHUB_PAT = Personal access token
+GPAT = Personal access token
 
 GitHub: [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
 
@@ -425,36 +423,37 @@ The change is immediate; you do not have to press a Save button.
 
 Use a suggested workflow, "browse all workflows", or create your own.
 
-"browse all workflows"\
-==>
-Choose a workflow
+
+------------------------------
+#### Step 2.5 Use Hugo workflow from GitHub "starter workflows"!
+
+**NOTE:**
+GitHub will suggest several [starter workflows](https://github.com/actions/starter-workflows/tree/main/pages).\
+If you already have a workflow to publish your site, you can skip "Step 2.5" and go to "Step 2.6".
+
+"browse all workflows" ==> Choose a workflow
 
 Search: hugo, enter\
-==>\
-Found 1 workflow\
+==> Found 1 workflow\
 Hugo, By GitHub Actions
 
 Click "Configure"!
 
-Edit:\
-Rename: hugo.yml  ==>  gh-pages.yml\
-HUGO_VERSION: 0.120.4
+**Edit**:
 
+1. Rename: hugo.yml  ==>  gh-pages.yml
+2. branches: ["main"]
+3. HUGO_VERSION: 0.120.4
 
----
-##### Customize the workflow
-
-gohugo: [Customize the workflow](https://gohugo.io/hosting-and-deployment/hosting-on-github/#customize-the-workflow)
-
-The example workflow above includes this step, which typically takes 10‑15 seconds:
+4. Comment these 2 lines:
 
 ```yaml
 - name: Install Dart Sass
   run: sudo snap install dart-sass
 ```
 
-You may remove this step if your site, themes, and modules
-do not transpile Sass to CSS using the Dart Sass transpiler.
+(You may remove this step if your site, themes, and modules
+do not transpile Sass to CSS using the Dart Sass transpiler.)
 
 
 GitHub: [Commit your first change](https://docs.github.com/en/get-started/quickstart/create-a-repo#commit-your-first-change)
@@ -465,30 +464,25 @@ Click "Commit changes"!
 ==>
 to the main branch
 
-> [!NOTE]
-GitHub will suggest several [starter workflows](https://github.com/actions/starter-workflows/tree/main/pages).
-If you already have a workflow to publish your site, you can skip this step (Search Hugo workflow).
-
 The GitHub Pages settings "will link to the workflow run"
 that "most recently deployed your site".
 
 
 ------------------------------
-If you already have a workflow to publish your site goto "Step 2.5" :
+#### Step 2.6 Use your Hugo workflow!
 
-------------------------------
-#### Step 2.5 Create an empty file in your local repository
+Create a new folder in your local repository:\
+.github/workflows/
 
-.github/workflows/gh-pages.yml
+Find hugo.yml somewhere, or download\
+https://github.com/actions/starter-workflows/blob/main/pages/hugo.yml\
+In fact, this is the same Hugo workflow above (from GitHub starter workflows)!
 
+Copy it to the .github/workflows/ folder.
 
-------------------------------
-#### Step 2.6 Copy and paste the YAML below into the file you created
+**Edit**:
+Everything the same as in "Step 2.5" (1 - 4).
 
-Copy and paste the YAML below into the file you created.\
-Change the branch name and Hugo version as needed.
-
-...
 
 ------------------------------
 #### Step 2.7 Commit the change to your local repository
@@ -496,7 +490,7 @@ Change the branch name and Hugo version as needed.
 Commit the change to your local repository with a commit message of something like "Add workflow", and push to GitHub.
 
 ```
-git pull origin main
+(git pull origin main)
 
 git status
 git add .
@@ -507,15 +501,12 @@ git push
 ```
 
 ------------------------------
-#### Step 2.8 From GitHub’s main menu, choose Actions
+#### (Step 2.8 and Step 2.9) From GitHub's main menu, choose Actions
 
 You will see something like this:
 
-1 workflow run\
-Add workflow
-
-------------------------------
-#### Step 2.9
+1 workflow run
+"Add workflow"
 
 When GitHub has finished building and deploying your site,
 the color of the status indicator will change to green.
