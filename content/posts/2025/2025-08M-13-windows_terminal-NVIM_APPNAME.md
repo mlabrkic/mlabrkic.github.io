@@ -20,8 +20,14 @@ Neovim (Vim-based text editor): https://neovim.io/
 
 Check in Neovim: `:h NVIM_APPNAME`, `:echo $NVIM_APPNAME` and `:echo stdpath("config")`
 
-This needs to be done first:
-1. Copy the Neovim test configuration to the "nvimt" folder: `C:\Users\<you>\AppData\Local\nvimt`
+These are my settings (Windows Terminal): [ "settings.json" ](/posts/2025/2025_08M_18-settings.json)
+
+
+***
+
+### You need to do this first:
+
+1. Copy the Neovim "TEST" configuration to the "nvimt" folder: `C:\Users\<you>\AppData\Local\nvimt`
 2. Then run the Neovim-TEST profile in the "Windows Terminal".
 
 ```

@@ -1,0 +1,352 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "id": "User.splitPane.D5151347"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "cd ..\r"
+            },
+            "id": "User.sendInput.9CC2D8C2"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": "togglePaneZoom",
+            "id": "User.togglePaneZoom"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "id": "User.splitPane.864CD510"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "cd %USERPROFILE%\\Documents\r"
+            },
+            "id": "User.sendInput.405005DB"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "cd /mnt/c/Users/$USER/My\\ Documents\r"
+            },
+            "id": "User.sendInput.4D9A171C"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "cd $HOME\\Documents\r"
+            },
+            "id": "User.sendInput.A7DB5C65"
+        },
+        {
+            "commands": 
+            [
+                {
+                    "command": 
+                    {
+                        "action": "adjustFontSize",
+                        "delta": 1
+                    }
+                },
+                {
+                    "command": 
+                    {
+                        "action": "adjustFontSize",
+                        "delta": -1
+                    }
+                },
+                {
+                    "command": "resetFontSize"
+                }
+            ],
+            "name": "F- Change font size..."
+        },
+        {
+            "commands": 
+            [
+                {
+                    "command": 
+                    {
+                        "action": "splitPane",
+                        "split": "vertical"
+                    },
+                    "keys": "alt+shift+plus"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "splitPane",
+                        "split": "horizontal"
+                    },
+                    "keys": "alt+shift+-"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "moveFocus",
+                        "direction": "right"
+                    },
+                    "keys": "alt+right"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "moveFocus",
+                        "direction": "left"
+                    },
+                    "keys": "alt+left"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "swapPane",
+                        "direction": "right"
+                    }
+                },
+                {
+                    "command": 
+                    {
+                        "action": "swapPane",
+                        "direction": "left"
+                    }
+                },
+                {
+                    "command": "toggleSplitOrientation"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "resizePane",
+                        "direction": "left"
+                    },
+                    "keys": "alt+shift+left"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "resizePane",
+                        "direction": "right"
+                    },
+                    "keys": "alt+shift+right"
+                },
+                {
+                    "command": "closePane",
+                    "keys": "ctrl+shift+w"
+                },
+                {
+                    "command": "togglePaneZoom",
+                    "keys": "ctrl+f11"
+                },
+                {
+                    "command": 
+                    {
+                        "action": "splitPane",
+                        "split": "auto",
+                        "splitMode": "duplicate"
+                    },
+                    "keys": "alt+shift+d"
+                }
+            ],
+            "name": "P- Pane ..."
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{85d07d3a-2606-428a-9cf8-16ba4c45c770}",
+    "firstWindowPreference": "defaultProfile",
+    "keybindings": 
+    [
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "id": "User.sendInput.9CC2D8C2",
+            "keys": "ctrl+up"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.splitPane.864CD510",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": "User.sendInput.405005DB",
+            "keys": "ctrl+3"
+        },
+        {
+            "id": "User.togglePaneZoom",
+            "keys": "ctrl+f11"
+        },
+        {
+            "id": "User.splitPane.D5151347",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "User.sendInput.4D9A171C",
+            "keys": "ctrl+2"
+        },
+        {
+            "id": "User.sendInput.A7DB5C65",
+            "keys": "ctrl+1"
+        }
+    ],
+    "launchMode": "maximized",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "font": 
+            {
+                "face": "SauceCodePro Nerd Font",
+                "size": 16,
+                "weight": "medium"
+            }
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "Campbell",
+                "commandline": "\"C:\\UTILS\\Neovim\\bin\\nvim.exe\"",
+                "environment": 
+                {
+                    "NVIM_APPNAME": "nvim"
+                },
+                "font": 
+                {
+                },
+                "guid": "{85d07d3a-2606-428a-9cf8-16ba4c45c770}",
+                "hidden": false,
+                "icon": "C:\\UTILS\\Neovim\\share\\nvim\\runtime\\neovim.ico",
+                "name": "Neovim-STABLE",
+                "startingDirectory": "%USERPROFILE%\\Documents",
+                "tabColor": "#36AC4C"
+            },
+            {
+                "commandline": "\"C:\\UTILS\\Neovim\\bin\\nvim.exe\"",
+                "environment": 
+                {
+                    "NVIM_APPNAME": "nvimt"
+                },
+                "font": 
+                {
+                },
+                "guid": "{31d2b985-d9d6-4288-b31d-8fd24d6b9bf0}",
+                "hidden": false,
+                "icon": "C:\\UTILS\\Neovim\\share\\nvim\\runtime\\neovim.ico",
+                "name": "Neovim-TEST",
+                "startingDirectory": "%USERPROFILE%\\Documents",
+                "tabColor": "#FFFFCC"
+            },
+            {
+                "colorScheme": "Campbell Powershell",
+                "font": 
+                {
+                },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell7",
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": "%USERPROFILE%\\Documents",
+                "tabColor": "#0087E2"
+            },
+            {
+                "font": 
+                {
+                    "face": "SauceCodePro Nerd Font",
+                    "size": 14
+                },
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "startingDirectory": "%USERPROFILE%\\Documents"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /k C:\\UTILS\\MINI\\alias_doskey.bat",
+                "font": 
+                {
+                    "face": "SauceCodePro Nerd Font",
+                    "size": 14
+                },
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "startingDirectory": "%USERPROFILE%\\Documents"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure",
+                "startingDirectory": "%USERPROFILE%\\Documents"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+        }
+    ],
+    "tabSwitcherMode": "inOrder",
+    "theme": "dark",
+    "themes": []
+}
