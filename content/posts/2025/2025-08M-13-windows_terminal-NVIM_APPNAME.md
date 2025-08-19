@@ -28,7 +28,7 @@ These are my settings (Windows Terminal): [ "settings.json" ](/posts/2025/2025_0
 ### You need to do this first:
 
 1. Copy the Neovim "TEST" configuration to the "nvimt" folder: `C:\Users\<you>\AppData\Local\nvimt`
-2. Then run the Neovim-TEST profile in the "Windows Terminal".
+2. Then run the Neovim-TEST profile (Ctrl-Shift-2) in the "Windows Terminal".
 
 ```
 These are my folders (stable and test):
@@ -107,6 +107,9 @@ Locate the `"profiles"` section and add a new object under `"list"`. Here is my 
 - Change `"nvimt"` to whatever profile/directory name you want Neovim to use, e.g., `"astronvim"`, `"lazyvim"`, etc.
 - Adjust `commandline`, `icon`, `colorScheme`, or `fontFace` as needed.
 - `environment` is the critical key: it will set the environment variable **only for terminals started from this profile**.[^1][^2][^3]
+
+**I want this**: when I start Windows Terminal, it should immediately open Neovim with "Stable" configuration.\
+I set that up here: Settings, Startup (**Default Profile = "Neovim-STABLE"**) (Ctrl-Shift-1)
 
 
 ### 3. **Save and Use Your Profile**
