@@ -42,7 +42,7 @@ If the file doesn't exist, PowerShell will prompt you to create it.[^2][^5]
 
 The profile script can be used to define functions, aliases, variables, or import modules, making them available in every new PowerShell session.
 
-**My profile**: [Microsoft.PowerShell_profile.ps1](/posts/2025/2025_08m_19-Microsoft.PowerShell_profile.ps1)
+**My profile**: [Microsoft.PowerShell_profile.ps1](/posts/2025/2025_08m_19-Microsoft.PowerShell_profile.ps1.txt)
 `/ C:\Users\<you>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 /`
 
 
