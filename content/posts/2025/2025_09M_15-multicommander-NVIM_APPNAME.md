@@ -20,6 +20,9 @@ Multi Commander is a multi-tabbed file manager and is an alternative to the stan
 
 Info (Multi Commander: Run the Neovim GUI): https://forum.multicommander.com/forum/index.php/topic,4835.0.html
 
+and this blog post:
+https://forum.multicommander.com/forum/index.php/topic,5047.0.html
+
 ***
 
 ### 1. First of all, do this
@@ -73,7 +76,6 @@ MC.Run CMD="cmd.exe" ARG="/c set NVIM_APPNAME=nvimt&&start neovide "{$selectedFi
 
 ------------------------------
 F12
-
 Neovim-neovide-STABLE-without-file
 Command type: Multi-Script
 
@@ -87,19 +89,39 @@ Command type: Multi-Script
 @var $app = "neovide";
 
 MC.Run CMD={$app} STARTIN={$fileDir}
-
 ```
 
 ***
 
-1. Windows CMD Shell How-to guides and examples
-https://ss64.com/nt/syntax.html
+### 3. Info - TEST configuration with "Windows PowerShell"
 
-2. START
-https://ss64.com/nt/start.html
+```MultiScript
+F11
+Neovim-neovide-TEST
+Command type: Multi-Script
+
+// TEST configuration with "Windows PowerShell"
+
+@var $selectedFile = GetSelectedPaths();
+@var $fileDir = PathGetPathPart($selectedFile, 1);
+
+MC.Run CMD="powershell.exe" ARG="-WindowStyle Hidden -Command $env:NVIM_APPNAME='nvimt';Start-Process neovide "{$selectedFile} STARTIN={$fileDir}
+```
+
+***
+
+Windows has two command-line shells: the Command shell and [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview).
+
+Windows Commands:
+1. https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands
+2. or https://ss64.com/nt/
+
+Windows CMD Shell syntax and START command:
+1. Windows CMD Shell How-to guides and examples https://ss64.com/nt/syntax.html
+2. START https://ss64.com/nt/start.html
 
 Try this:
-1. Run Command Shell: cmd.exe
+1. Run Command shell (Win-s: run, press Enter): cmd.exe
 2. START "Demo 1" nvim
 3. START neovide
 
